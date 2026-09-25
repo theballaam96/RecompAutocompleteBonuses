@@ -1,0 +1,32 @@
+[manifest]
+id = "autocomplete_bonus"
+version = "1.0.0"
+display_name = "Autocomplete Bonus Barrels"
+description = "Makes bonus barrels produce the reward immediately without having to beat the minigame"
+short_description = "Makes bonus barrels produce the reward immediately without having to beat the minigame"
+authors = [ "Ballaam" ]
+game_id = "dk64"
+minimum_recomp_version = "1.0.0"
+
+[[manifest.config_options]]
+id = "play_oh_banana"
+name = "Play Oh Banana Jingle"
+description = "Controls whether the 'Oh Banana' jingle plays upon a bonus being completed"
+type = "Enum"
+options = [ "Disabled", "Enabled" ]
+default = "Disabled"
+
+[[manifest.config_options]]
+id = "show_explosion"
+name = "Show Explosion Sprite"
+description = "Controls whether there will be an explosion upon a bonus barrel completing. Can look/sound weird with long draw distances"
+type = "Enum"
+options = [ "Disabled", "Enabled" ]
+default = "Disabled"
+
+[inputs]
+elf_path = "build/mod.elf"
+mod_filename = "autocomplete_bonus"
+func_reference_syms_file = "Dk64Syms/dump.toml"
+data_reference_syms_files = [ "Dk64Syms/data_dump.toml" ]
+additional_files = ["thumb.dds"]
